@@ -14,6 +14,10 @@
       } ]
     },
     {
+      "key": "strict-transport-security",
+      "value": "max-age=31536000; includeSubDomains"
+    },
+    {
       "target": "dev",
       "public": "dist",
       "ignore": [
