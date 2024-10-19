@@ -8,14 +8,23 @@
         "**/.*",
         "**/node_modules/**"
       ],
-      "rewrites": [ {
-        "source": "**",
-        "destination": "/index.html"
-      } ]
-    },
-    {
-      "key": "strict-transport-security",
-      "value": "max-age=31536000; includeSubDomains"
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "**",
+          "headers": [
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=31536000; includeSubDomains"
+            }
+          ]
+        }
+      ]
     },
     {
       "target": "dev",
@@ -25,10 +34,12 @@
         "**/.*",
         "**/node_modules/**"
       ],
-      "rewrites": [ {
-        "source": "**",
-        "destination": "/index.html"
-      } ]
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
     },
     {
       "target": "uat",
@@ -38,10 +49,12 @@
         "**/.*",
         "**/node_modules/**"
       ],
-      "rewrites": [ {
-        "source": "**",
-        "destination": "/index.html"
-      } ]
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
     }
   ]
 }
